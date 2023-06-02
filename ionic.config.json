@@ -1,0 +1,7 @@
+{
+  "name": "blue-sands",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
