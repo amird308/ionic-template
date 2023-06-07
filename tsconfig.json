@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -14,7 +15,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@modules/*": ["src/modules/*"],
+      "@hooks/*": ["src/shared/hooks/*"],
+      "@models/*": ["src/shared/models/*"],
+      "@stores/*": ["src/shared/stores/*"],
+      "@helpers/*": ["src/shared/helpers/*"],
+      "@services/*": ["src/shared/services/*"],
+      "@constants/*": ["src/shared/constants/*"],
+      "@components/*": ["src/shared/components/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+      "@entities/*": ["src/infrastructure/entities/*"],
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
