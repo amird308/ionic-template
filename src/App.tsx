@@ -21,17 +21,21 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './infrastructure/configs/themes.css';
+import Initial from '@infrastructure/components/initial';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Router />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () =>{
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <Initial />
+        <IonRouterOutlet>
+          <Router />
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+  )
+};
 
 export default App;
