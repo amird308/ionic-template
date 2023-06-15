@@ -5,6 +5,10 @@ const Initial = () => {
     const theme = useTheme();
     useEffect(()=> {
         theme.setDefaultTheme();
+        // SplashScreen.show({
+        //     showDuration: 3000,
+        //     autoHide: true
+        //   });
     },[]);
 
     return null;
