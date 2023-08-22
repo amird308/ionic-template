@@ -27,7 +27,9 @@ const Home: React.FC = () => {
         }}>
           navigate
         </IonButton>
-        <IonButton onClick={()=> {
+        <IonButton
+        className="m-12"
+        onClick={()=> {
           theme.toggleTheme();
         }}>
           theme

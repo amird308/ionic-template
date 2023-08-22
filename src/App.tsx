@@ -3,7 +3,6 @@ import { IonReactRouter } from '@ionic/react-router';
 import Router from '@infrastructure/router';
 
 
-
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -21,7 +20,8 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 /* Theme variables */
-import './infrastructure/configs/themes.css';
+import './themes.css';
+import "./App.css";
 import Initial from '@infrastructure/components/initial';
 
 setupIonicReact();
