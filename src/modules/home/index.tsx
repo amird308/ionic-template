@@ -1,6 +1,6 @@
 import { IonHeader, IonPage, IonContent, IonFooter, IonToolbar, IonTitle, IonButtons, IonBackButton, IonButton, useIonRouter } from '@ionic/react';
 import LINKS from '../../shared/constants/links';
-import useTheme from '@hooks/useTheme';
+import useTheme from '@hooks/theme';
 import Button, { IButtonRef } from '@components/button';
 
 import './style.scss';

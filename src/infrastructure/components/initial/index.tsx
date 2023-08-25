@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useTheme from "@hooks/useTheme";
+import useTheme from "@hooks/theme";
 
 const Initial = () => {
     const theme = useTheme();
