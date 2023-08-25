@@ -2,14 +2,15 @@ import { IonHeader, IonPage, IonContent, IonFooter, IonToolbar, IonTitle, IonBut
 import LINKS from '../../shared/constants/links';
 import useTheme from '@hooks/theme';
 import Button, { IButtonRef } from '@components/button';
+import { Trans, useTranslation } from 'react-i18next';
 
 import './style.scss';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const Home: React.FC = () => {
   const router = useIonRouter();
   const theme = useTheme();
-
+  const { t } = useTranslation(['translation']);
   const ref = useRef<IButtonRef | null>(null);
   return (
     <IonPage id="home-page">
@@ -42,9 +43,9 @@ const Home: React.FC = () => {
         }}>
           hi  
         </Button>
+        <h2>{t('headerTitle')}</h2>
       </IonContent>
       <IonFooter>
-
       </IonFooter>
     </IonPage>
   );
