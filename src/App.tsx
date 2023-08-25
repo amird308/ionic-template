@@ -23,11 +23,13 @@ import '@ionic/react/css/display.css';
 import './themes.css';
 import "./App.css";
 import Initial from '@infrastructure/components/initial';
+import { Suspense } from 'react';
 
 setupIonicReact();
 
 const App: React.FC = () =>{
   return (
+    <Suspense fallback="...is loading">
     <IonApp>
       <IonReactRouter>
         <Initial />
@@ -36,6 +38,7 @@ const App: React.FC = () =>{
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
+    </Suspense>
   )
 };
 
