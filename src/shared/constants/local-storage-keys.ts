@@ -1,5 +1,6 @@
 const LOCAL_STORAGE_KEYS = {
     THEME: "theme",
+    LANGUAGE: "language",
     HOME: "/home",
     PROFILE: "/profile",
 };
