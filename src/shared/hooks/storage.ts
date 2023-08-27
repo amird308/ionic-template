@@ -1,5 +1,5 @@
-import storage, { IStorage } from '@helpers/storage';
 import { useCallback } from 'react';
+import storage, { IStorage } from '@helpers/storage';
 
 
 export function useStorage(): IStorage {
@@ -23,8 +23,8 @@ export function useStorage(): IStorage {
     return storage.keys();
   }, []);
 
-  const clear = useCallback(() => {
-    return Preferences.clear();
+  const clear = useCallback(async () => {
+    return storage.clear();
   }, []);
 
   return { get, set, remove, getKeys, clear };

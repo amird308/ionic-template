@@ -1,8 +1,9 @@
 import LOCAL_STORAGE_KEYS from "@constants/local-storage-keys";
-import storage from "@helpers/storage";
 import themes from "@infrastructure/entities/themes";
+import { useStorage } from "./storage";
 
 const useTheme = () => {
+    const storage = useStorage();
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
     const toggleTheme = (value?: themes, cash: boolean = true) => {
         if(value === themes.dark){
@@ -20,12 +21,12 @@ const useTheme = () => {
         }
     }
 
-    const setDefaultTheme = async () => {
-        const storedTheme = await storage.get(LOCAL_STORAGE_KEYS.THEME);
+    const iniTheme = async () => {
+        const storedTheme = (await storage.get(LOCAL_STORAGE_KEYS.THEME));
         console.log(storedTheme);
-        if(storedTheme && storedTheme.value === themes.dark){
+        if(storedTheme && storedTheme === themes.dark){
             toggleTheme(themes.dark);
-        } else if(storedTheme?.value === themes.light) {
+        } else if(storedTheme && storedTheme === themes.light) {
             toggleTheme(themes.light);
         } else {
             const _theme = prefersDark.matches ? themes.dark : themes.light;
@@ -34,7 +35,7 @@ const useTheme = () => {
     }
 
     return {
-        setDefaultTheme,
+        iniTheme,
         toggleTheme,
     }
 
