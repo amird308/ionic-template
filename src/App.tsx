@@ -21,9 +21,10 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './themes.css';
-import "./App.css";
-import Initial from '@infrastructure/components/initial';
 import { Suspense } from 'react';
+import Initial from '@infrastructure/components/initial';
+
+import "./App.css";
 
 setupIonicReact();
 
