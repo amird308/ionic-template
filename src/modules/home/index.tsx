@@ -1,4 +1,4 @@
-import { IonHeader, IonPage, IonContent, IonFooter, IonToolbar, IonTitle, IonButtons, IonBackButton, IonButton, useIonRouter } from '@ionic/react';
+import { IonHeader, IonPage, IonContent, IonFooter, IonToolbar, IonTitle, IonButtons, IonBackButton, useIonRouter } from '@ionic/react';
 import LINKS from '../../shared/constants/links';
 import useTheme from '@hooks/theme';
 import Button, { IButtonRef } from '@components/button';
@@ -23,21 +23,21 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen={true}>
-        <IonButton onClick={()=> {
+        <Button onClick={()=> {
             router.push(LINKS.PROFILE);
         }}>
           navigate
-        </IonButton>
-        <IonButton
+        </Button>
+        <Button
         className="m-12"
         onClick={()=> {
           theme.toggleTheme();
         }}>
           theme
-        </IonButton>
-        <IonButton  onClick={ ()=> ref?.current?.click()}>
+        </Button>
+        <Button  onClick={ ()=> ref?.current?.click()}>
           theme
-        </IonButton>
+        </Button>
         <Button ref={ref} onClick={()=> {
           console.log("hi man");
         }}>
