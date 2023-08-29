@@ -2,10 +2,10 @@ import { IonHeader, IonPage, IonContent, IonFooter, IonToolbar, IonTitle, IonBut
 import LINKS from '../../shared/constants/links';
 import useTheme from '@hooks/theme';
 import Button, { IButtonRef } from '@components/button';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import './style.scss';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 const Home: React.FC = () => {
   const router = useIonRouter();
