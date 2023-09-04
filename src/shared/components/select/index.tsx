@@ -1,7 +1,9 @@
-import { IonSelect, IonSelectOption } from "@ionic/react"
-import { forwardRef } from "react";
+import { HTMLAttributes, RefAttributes, forwardRef } from "react";
+import type { JSX } from '@ionic/core/components';
+import { IonSelect, IonSelectOption } from "@ionic/react";
+import { StyleReactProps } from "@ionic/react/dist/types/components/react-component-lib/interfaces";
 
-export type ISelectOptionProps = typeof IonSelectOption & {
+export type ISelectOptionProps = JSX.IonSelectOption & Omit<HTMLAttributes<HTMLIonSelectOptionElement>, "style"> & StyleReactProps & RefAttributes<HTMLIonSelectOptionElement> & {
     children: any
 };
 
@@ -15,7 +17,7 @@ export const SelectOption = forwardRef<IISelectOptionRef, ISelectOptionProps>(({
         )
 });
 
-export type ISelectProps = typeof IonSelect & {
+export type ISelectProps = JSX.IonSelect & Omit<HTMLAttributes<HTMLIonSelectElement>, "style"> & StyleReactProps & RefAttributes<HTMLIonSelectElement> & {
     children: any
 };
 
