@@ -1,10 +1,9 @@
-
-import { IonButton } from '@ionic/react';
+import Button from '@components/button';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Example/Button',
-  component: IonButton,
+  component: Button,
   parameters: {
     layout: 'centered',
   },
@@ -19,7 +18,7 @@ const meta = {
       control: { type: 'radio' },
     },
   },
-} satisfies Meta<typeof IonButton>;
+} satisfies Meta<typeof Button>;
 
 
 export default meta;

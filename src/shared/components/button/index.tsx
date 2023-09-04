@@ -1,5 +1,3 @@
-
-
 import type { JSX } from '@ionic/core/components';
 import { HTMLAttributes, RefAttributes, forwardRef } from "react";
 import { IonButton, RouterDirection, RouterOptions, AnimationBuilder } from "@ionic/react";
