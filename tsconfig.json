@@ -18,6 +18,7 @@
     "jsx": "react-jsx",
     "paths": {
       "@modules/*": ["src/modules/*"],
+      "@shared/*": ["src/shared/*"],
       "@hooks/*": ["src/shared/hooks/*"],
       "@models/*": ["src/shared/models/*"],
       "@stores/*": ["src/shared/stores/*"],
