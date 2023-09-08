@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit"
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux"
 
 import profileReducer from "../../shared/stores/profile/slice"
+import STORES_KEY from "./constants"
 
 
 export const configureAppStore = configureStore({

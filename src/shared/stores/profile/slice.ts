@@ -2,6 +2,7 @@ import IUser from "@infrastructure/entities/user"
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 
 import { profileSliceState } from "./types"
+import STORES_KEY from "@infrastructure/store/constants"
 
 const initialState: profileSliceState = {
   userInfo: {
