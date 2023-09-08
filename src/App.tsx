@@ -1,8 +1,10 @@
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Router from '@infrastructure/router';
+import { Provider } from "react-redux";
 
 
+// TODO pack all css files together 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -20,25 +22,28 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 /* Theme variables */
-import './themes.css';
+import '@infrastructure/themes.css';
 import { Suspense } from 'react';
 import Initial from '@infrastructure/components/initial';
 
 import "./App.css";
+import { configureAppStore } from '@infrastructure/store/store';
 
 setupIonicReact();
 
 const App: React.FC = () =>{
   return (
     <Suspense fallback="...is loading">
-    <IonApp>
-      <IonReactRouter>
-        <Initial />
-        <IonRouterOutlet>
-          <Router />
-        </IonRouterOutlet>
-      </IonReactRouter>
-    </IonApp>
+    <Provider store={configureAppStore}> 
+      <IonApp>
+        <IonReactRouter>
+          <Initial />
+          <IonRouterOutlet>
+            <Router />
+          </IonRouterOutlet>
+        </IonReactRouter>
+      </IonApp>
+    </Provider>
     </Suspense>
   )
 };
