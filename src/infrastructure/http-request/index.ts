@@ -14,14 +14,9 @@ const baseQuery = fetchBaseQuery({
 const baseQueryWithRetry = retry(baseQuery, { maxRetries: 6 })
 
 
+
 export const api = createApi({
   baseQuery: baseQueryWithRetry,
-  tagTypes: ['Time', 'Posts', 'Counter'],
+  tagTypes: ["Profile", "Posts"],
   endpoints: () => ({}),
-})
-
-export const enhancedApi = api.enhanceEndpoints({
-  endpoints: () => ({
-    getPost: () => 'test',
-  }),
 })
