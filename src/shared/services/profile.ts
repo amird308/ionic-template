@@ -1,40 +1,28 @@
 import { api } from "@infrastructure/http-request"
-
-interface CountResponse {
-  count: number
-}
+import IUpdateProfileRequest from "@shared/models/requests/update-profile"
+import IGetProfileResponse from "@shared/models/responses/get-profile"
+import IUpdateProfileResponse from "@shared/models/responses/update-profile"
 
 export const profileServices = api.injectEndpoints({
   endpoints: (build) => ({
-    getCount: build.query<CountResponse, void>({
-      query: () => 'count',
-      providesTags: ['Counter'],
+    getProfile: build.query<IGetProfileResponse, void>({
+      query: () => 'profile',
+      providesTags: ["Profile"]
     }),
-    incrementCount: build.mutation<CountResponse, number>({
-      query(amount) {
+    updateProfile: build.mutation<IUpdateProfileResponse, IUpdateProfileRequest>({
+      query(userInfo) {
         return {
-          url: `increment`,
+          url: `profile`,
           method: 'PUT',
-          body: { amount },
+          body: {...userInfo},
         }
       },
-      invalidatesTags: ['Counter'],
-    }),
-    decrementCount: build.mutation<CountResponse, number>({
-      query(amount) {
-        return {
-          url: `decrement`,
-          method: 'PUT',
-          body: { amount },
-        }
-      },
-      invalidatesTags: ['Counter'],
+      invalidatesTags: ['Profile'],
     }),
   }),
 })
 
-export const {
-  useDecrementCountMutation,
-  useGetCountQuery,
-  useIncrementCountMutation,
+export const {  
+  useGetProfileQuery,
+  useUpdateProfileMutation
 } = profileServices

@@ -1,7 +1,7 @@
 import profileHandlers from "./profile";
 
-const handlers = {
+const handlers = [
     ...profileHandlers,
-}
+]
 
 export default handlers;
