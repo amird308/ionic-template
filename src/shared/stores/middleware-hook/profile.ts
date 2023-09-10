@@ -1,4 +1,4 @@
-import { useAppSelector } from "@infrastructure/store/store";
+import { useAppSelector } from "@infrastructure/store";
 import IProfileStore from "@models/store/profile";
 import { profileSlice } from "@stores/profile/slice";
 
