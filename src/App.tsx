@@ -27,7 +27,7 @@ import { Suspense } from 'react';
 import Initial from '@infrastructure/components/initial';
 
 import "./App.css";
-import { configureAppStore } from '@infrastructure/store/store';
+import { configureAppStore } from '@infrastructure/store';
 
 setupIonicReact();
 
