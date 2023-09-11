@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
 
-import { setupIonicReact, IonApp, IonContent, IonPage } from '@ionic/react';
+import { setupIonicReact } from '@ionic/react';
 
 setupIonicReact();
 
@@ -19,7 +19,7 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-import "../src/themes.css";
+import "@infrastructure/themes.css";
 import "./style.css";
 import React from "react";
 
