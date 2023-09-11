@@ -1,5 +1,1 @@
-const STORES_KEY = {
-    PROFILE: "profile",
-}
-
-export default STORES_KEY
+export const STORES_KEY_PROFILE = "profile";
