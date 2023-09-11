@@ -1,0 +1,1 @@
+export const QUERY_TAG_PROFILE = "Profile";
