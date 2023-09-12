@@ -1,6 +1,14 @@
 #profile-page {
- test: {
-  color: blue;
+ .imageProfile {
+    height: 100px;
+    width: 100px;
+
+    &::part(image) {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 1000px;
+      }
  }
 }
 
