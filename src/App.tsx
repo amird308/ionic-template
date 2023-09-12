@@ -27,23 +27,24 @@ import { Suspense } from 'react';
 import Initial from '@infrastructure/components/initial';
 
 import "./App.css";
-import { configureAppStore } from '@infrastructure/store/store';
+import { configureAppStore } from '@infrastructure/store';
 
 setupIonicReact();
 
-const App: React.FC = () =>{
+const App: React.FC = () => {
   return (
     <Suspense fallback="...is loading">
-    <Provider store={configureAppStore}> 
-      <IonApp>
-        <IonReactRouter>
-          <Initial />
-          <IonRouterOutlet>
-            <Router />
-          </IonRouterOutlet>
-        </IonReactRouter>
-      </IonApp>
-    </Provider>
+      <Provider store={configureAppStore}>
+        <Initial>
+          <IonApp>
+            <IonReactRouter>
+              <IonRouterOutlet>
+                <Router />
+              </IonRouterOutlet>
+            </IonReactRouter>
+          </IonApp>
+        </Initial>
+      </Provider>
     </Suspense>
   )
 };

@@ -1,3 +1,1 @@
-const STORES_KEY = {
-    PROFILE: "profile",
-}
+export const STORES_KEY_PROFILE = "profile";

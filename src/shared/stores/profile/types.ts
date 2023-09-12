@@ -1,5 +1,5 @@
-import IUser from "@infrastructure/entities/user"
+import IProfile from "@entities/profile";
 
-export interface profileSliceState {
-    userInfo: IUser
-  }
+export interface profileSliceState extends IProfile{
+
+}

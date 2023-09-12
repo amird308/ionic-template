@@ -7,6 +7,11 @@ import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import './infrastructure/i18n';
 const container = document.getElementById('root');
 const root = createRoot(container!);
+
+import initMsw from '@infrastructure/mock-services-msw';
+
+initMsw();
+
 root.render(
   <React.StrictMode>
       <App />

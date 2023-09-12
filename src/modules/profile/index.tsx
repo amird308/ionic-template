@@ -1,7 +1,10 @@
 import { IonHeader, IonPage, IonContent, IonFooter, IonToolbar, IonTitle, IonButtons, IonBackButton } from '@ionic/react';
 import './style.scss';
+import { useGetProfileQuery } from '@services/profile';
 
 const Profile: React.FC = () => {
+  const { data } = useGetProfileQuery(undefined, {});
+  
   return (
     <IonPage id="profile-page">
       <IonHeader>
