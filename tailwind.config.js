@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -10,6 +12,7 @@ module.exports = {
   },
   theme: {
     colors: {
+      ...colors,
       primary: "var(--ion-color-primary)",
     }
   },
